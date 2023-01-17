@@ -1,0 +1,31 @@
+---
+// Copyright by @Hen9 (https://github.com/ProHen9)
+
+export interface Props {
+  title: string;
+  body: string;
+  href: string;
+}
+
+const { href, title, body } = Astro.props;
+---
+
+<a target="_blanc" class="card" href={href}>
+  <h2 class="HeaderText">{title}</h2>
+  <p class="bodyText">{body}</p>
+</a>
+<style>
+  .card {
+    border-radius: 5px;
+    background-color: #282828;
+    width: 100%;
+    text-decoration: none;
+    padding: 15px;
+    color: white;
+  }
+  @media (max-width: 700px) {
+    .card {
+      width: 90%;
+    }
+  }
+</style>

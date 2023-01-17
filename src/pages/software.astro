@@ -1,0 +1,41 @@
+---
+// Copyright by @Hen9 (https://github.com/ProHen9)
+
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+---
+
+<Layout title="Software">
+  <h2 class="TextH2">Software, die ich benutze:</h2>
+  <div class="GridCard">
+    <Card
+      title="Davinci Resolve"
+      body="Davinci Resolve ist schon sehr lange ein treuer Begleiter in Sachen Videoschnitt. Ich mag das Programm aber sehr, weil es Gratis ist und weil man sehr viele Möglichkeiten hat, ein gutes Video auf die Beine zu stellen."
+      href="https://www.blackmagicdesign.com/de/products/davinciresolve/"
+    />
+    <Card
+      title="Github"
+      body="Github ist einfach für mich persönlich die beste Plattform zum speichern und Kontrollieren von Code. Ich selber habe einen super Workflow mit VSCODE, Git und Github."
+      href="https://github.com/"
+    />
+  </div>
+</Layout>
+<style>
+  .GridCard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40%, 40%));
+    gap: 1rem;
+    padding: 0;
+  }
+  .TextH2 {
+    text-align: center;
+  }
+  @media (max-width: 700px) {
+    .GridCard {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 10px;
+      justify-content: center;
+    }
+  }
+</style>
