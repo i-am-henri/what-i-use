@@ -48,11 +48,16 @@ import Card from "../components/Card.astro";
   .TextH2 {
     text-align: center;
   }
+  @media (max-width: 850px) {
+    .GridCard {
+      gap: 10%;
+    }
+  }
   @media (max-width: 700px) {
     .GridCard {
       display: flex;
       flex-direction: column;
-      margin-bottom: 10px;
+      margin-bottom: 5%;
       justify-content: center;
     }
   }
