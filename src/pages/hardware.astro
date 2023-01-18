@@ -1,3 +1,64 @@
 ---
 // Copyright by @Hen9 (https://github.com/ProHen9)
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
 ---
+
+<Layout title="Hardware">
+  <h2 class="TextH2">Software, die ich benutze:</h2>
+  <div class="CardWrapper">
+    <div class="GridCard">
+      <Card
+        title="Davinci Resolve"
+        body="Davinci Resolve ist schon sehr lange ein treuer Begleiter in Sachen Videoschnitt. Ich mag das Programm aber sehr, weil es Gratis ist und weil man sehr viele Möglichkeiten hat, ein gutes Video auf die Beine zu stellen."
+        href="https://www.blackmagicdesign.com/de/products/davinciresolve/"
+      />
+      <Card
+        title="Github"
+        body="Github ist einfach für mich persönlich die beste Plattform zum speichern und Kontrollieren von Code. Ich selber habe einen super Workflow mit VSCODE, Git und Github."
+        href="https://github.com/"
+      />
+      <Card
+        title="Visual Studio Code"
+        body="Visual Studio Code begeistert mich immer wieder mit den Funktionen, den Themes und natürlich den Extensions. Ich mag den Editor sehr gerne, weil ich einfach schon meinen perfekten Workflow darin gefunden habe."
+        href="https://code.visualstudio.com/"
+      />
+      <Card
+        title="Figma"
+        body="Figma ist ein Programm um Designs zu erstellen. Besonders gut finde ich es darin, Werbsite zu designen. Das Programm ist gratis und von Adobe."
+        href="https://figma.com/"
+      />
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .GridCard {
+    display: grid;
+    width: 80%;
+    gap: 5%;
+    grid-template-columns: 2fr 2fr;
+    padding: 0;
+  }
+  .CardWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .TextH2 {
+    text-align: center;
+  }
+  @media (max-width: 850px) {
+    .GridCard {
+      gap: 10%;
+    }
+  }
+  @media (max-width: 700px) {
+    .GridCard {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 5%;
+      justify-content: center;
+    }
+  }
+</style>
