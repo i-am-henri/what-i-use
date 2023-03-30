@@ -1,0 +1,66 @@
+---
+import Card from "../components/Card.astro";
+import Layout from "../layouts/Layout.astro";
+import picture from "../../public/lol.jpg";
+---
+
+<Layout title="PC">
+
+
+    <h2 class="TextH2">Mein PC:</h2>
+    <img src={picture} class="Image"/>
+    <div class="CardWrapper">
+      <div class="GridCard">
+        <Card
+          title="PC"
+          body="Ich habe mir einen sehr guten, aber auch noch Presiwerten PC selber gebaut."
+          href="/pc"
+        />
+        <Card
+          title="Monitor"
+          body="Mein primärer Monitor ist zurzeit auch noch mein einzuger Monitor. Dafür besitzt er 144hz und hängt an der Wand."
+          href="https://www.amazon.de/ASUS-VG249Q-Reaktionszeit-FreeSync-DisplayPort/dp/B082NRKT4K/ref=sr_1_1?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3T9EDFQ0EGPX8&keywords=asus+tuf+gaming+24+zoll+144hz&qid=1674073652&sprefix=asus+tuf+gaming+24+zoll+144hz%2Caps%2C98&sr=8-1"
+        />
+        <Card
+          title="Tastatur"
+          body="In meinem besitzt befindet sich zurzeit die RK 61 mit Red switches. Sie ist eine 60% Tastatur, die mir sehr gefällt und deshalb hat sie auch einen Tapemod."
+          href="https://rkgamingstore.com/de/products/rk61-de-qwertz-kabelgebundene?variant=40711192182962"
+        />
+      </div>
+    </div>
+  </Layout>
+  
+  <style>
+    .GridCard {
+      display: grid;
+      width: 80%;
+      gap: 5%;
+      grid-template-columns: 2fr 2fr;
+      padding: 0;
+    }
+    .CardWrapper {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+    .TextH2 {
+      text-align: center;
+    }
+    @media (max-width: 850px) {
+      .GridCard {
+        gap: 10%;
+      }
+    }
+    @media (max-width: 700px) {
+      .GridCard {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 5%;
+        justify-content: center;
+      }
+      .Image {
+
+      }
+    }
+  </style>
+  
